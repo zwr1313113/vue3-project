@@ -11,6 +11,7 @@
 
 <script setup>
 import HelloWorld from '../components/HelloWorld.vue'
+
 </script>
 
 <style scoped>
@@ -32,6 +33,15 @@ header {
   display: flex;
   place-items: flex-start;
   flex-wrap: wrap;
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
 }
 
 @media (min-width: 1024px) {

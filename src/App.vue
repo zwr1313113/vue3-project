@@ -1,13 +1,16 @@
 <script setup>
+import Navigation from './components/navigation.vue'
 </script>
 
 <template>
   <div id="app">
-    <nav>
+    <!-- <nav>
       <router-link to="/">首页</router-link>
-      <router-link to="/about">关于</router-link>
       <router-link to="/dynamic-list">动态列表</router-link>
-    </nav>
+    </nav> -->
+    <div class="navigation">
+        <navigation ref="navigationRef" />
+    </div>
     <main>
       <router-view />
     </main>
@@ -16,7 +19,12 @@
 
 <style scoped>
 #app {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  display: flex;
+}
+
+.navigation {
+
 }
 
 nav {
@@ -40,11 +48,11 @@ nav a:hover {
 }
 
 nav a.router-link-active {
-  background-color: #42b983;
+  /* background-color: #42b983; */
   color: #fff;
 }
 
 main {
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 </style>
